@@ -19,10 +19,10 @@ RSpec.describe 'schools show page', type: :feature do
 
     expect(page).to have_content(school_1.name)
     expect(page).to have_content(school_1.census)
-    expect(page).to not_have_content(school_2.name)
-    expect(page).to not_have_content(school_2.census)
-    expect(page).to not_have_content(school_3.name)
-    expect(page).to not_have_content(school_3.census)
+    expect(page).to_not have_content(school_2.name)
+    expect(page).to_not have_content(school_2.census)
+    expect(page).to_not have_content(school_3.name)
+    expect(page).to_not have_content(school_3.census)
 
   end
 end
