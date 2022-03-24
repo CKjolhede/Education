@@ -255,6 +255,7 @@
       },
       "/Users/kjolhede/turing/2module/education/education/spec/models/school_spec.rb": {
         "lines": [
+          null,
           1,
           null,
           1,
@@ -301,8 +302,25 @@
           1,
           null
         ]
+      },
+      "/Users/kjolhede/turing/2module/education/education/app/controllers/schools_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kjolhede/turing/2module/education/education/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1648008301
+    "timestamp": 1648106500
   }
 }

@@ -1,3 +1,4 @@
+#spec/features/index_spec.rb
 require 'rails_helper'
 
 RSpec.describe 'users index page' do

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-22T22:05:01-06:00">2022-03-22T22:05:01-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-24T01:21:40-06:00">2022-03-24T01:21:40-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>20</b> files in total.
+    <b>22</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>57</b> relevant lines,
-    <span class="green"><b>57</b> lines covered</span> and
+    <b>61</b> relevant lines,
+    <span class="green"><b>61</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -69,6 +69,28 @@
         </tr>
       </thead>
       <tbody>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#871f14660d79d737a898351594430dd088f5353e" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#603b39516ba18dc31ef5c9518daf8a7c0bf2aa3c" class="src_link" title="app/controllers/schools_controller.rb">app/controllers/schools_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f15ef075a617e133193146629617c6c6fedfe3fd" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
@@ -271,7 +293,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c42e9a338c9e066a7644a673b3fd64bdb8e20860" class="src_link" title="spec/models/school_spec.rb">spec/models/school_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">7</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
@@ -306,6 +328,167 @@
       </div>
 
       <div class="source_files">
+      
+        <div class="source_table" id="871f14660d79d737a898351594430dd088f5353e">
+  <div class="header">
+    <h3>app/controllers/application_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>1</b> relevant lines.
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class ApplicationController &lt; ActionController::Base</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="603b39516ba18dc31ef5c9518daf8a7c0bf2aa3c">
+  <div class="header">
+    <h3>app/controllers/schools_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class SchoolsController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def index</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @schools = School.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
       
         <div class="source_table" id="f15ef075a617e133193146629617c6c6fedfe3fd">
   <div class="header">
@@ -3147,7 +3330,18 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
+          <li class="never" data-hits="" data-linenumber="1">
+            
+            
+
+            
+
+            <code class="ruby">#spec/models/school_spec.rb</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
             <span class="hits">1</span>
             
 
@@ -3158,7 +3352,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="2">
+          <li class="never" data-hits="" data-linenumber="3">
             
             
 
@@ -3169,7 +3363,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
+          <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 
@@ -3180,7 +3374,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
+          <li class="covered" data-hits="1" data-linenumber="5">
             <span class="hits">1</span>
             
 
@@ -3191,7 +3385,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
+          <li class="covered" data-hits="2" data-linenumber="6">
             <span class="hits">2</span>
             
 
@@ -3202,7 +3396,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -3213,7 +3407,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
