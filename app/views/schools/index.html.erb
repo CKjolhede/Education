@@ -1,8 +1,9 @@
-<% #views/schools/index.html.erb% %>
+<% #views/schools/index.html.erb %>
 
 <h1> Schools </h1>
-
+<div>
 <% @schools.each do |school| %>
-<h3><b><%= school.name %></b></h3>
-<h4>Census: <%= school.census %></h4>
+<p><b><%= school.name %><p/>
+<p> # of Enrolled Students: <%= school.census %></b></p>
+</div>
 <% end %>

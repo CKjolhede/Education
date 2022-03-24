@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# School.destroy_all
+# Student.destroy_all
+# school_1 = School.create!(name: "City High School", census: 200)
+# school_2 = School.create!(name: "City Middle School", census: 97)
+# school_3 = School.create!(name: "City Grade School", census: 104)

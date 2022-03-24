@@ -244,12 +244,47 @@
           null,
           null,
           1,
+          1,
+          1,
+          null,
           null
         ]
       },
       "/Users/kjolhede/turing/2module/education/education/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/kjolhede/turing/2module/education/education/spec/features/schools/show_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
           null
         ]
       },
@@ -290,7 +325,6 @@
           2,
           null,
           null,
-          null,
           null
         ]
       },
@@ -305,11 +339,16 @@
       },
       "/Users/kjolhede/turing/2module/education/education/app/controllers/schools_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
           1,
           null,
+          null,
+          1,
+          1,
           null,
           null
         ]
@@ -321,6 +360,6 @@
         ]
       }
     },
-    "timestamp": 1648106500
+    "timestamp": 1648120621
   }
 }

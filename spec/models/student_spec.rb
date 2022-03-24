@@ -5,5 +5,4 @@ RSpec.describe Student, type: :model do
     it {should belong_to :school}
   end
 
-
 end
