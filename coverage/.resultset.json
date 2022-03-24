@@ -242,12 +242,25 @@
         "lines": [
           1,
           null,
+          null,
+          1,
           null
         ]
       },
       "/Users/kjolhede/turing/2module/education/education/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/kjolhede/turing/2module/education/education/spec/models/school_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
           null
         ]
       },
@@ -290,6 +303,6 @@
         ]
       }
     },
-    "timestamp": 1648006932
+    "timestamp": 1648008301
   }
 }
