@@ -1,4 +1,5 @@
 #spec/features/students/index_spec.rb
+
 require 'rails_helper'
 # User Story 3, Child Index
 # As a visitor
