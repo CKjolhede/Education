@@ -1,3 +1,8 @@
-#app/views/students/index.html.erb
+<% #app/views/students/index.html.erb %>
 
 <h1> Students </h1>
+
+<% @students.each do |student| %>
+<p><b>Name: <%= student.name %><p/>
+<p>GPA: <%= student.gpa %></b></p>
+<% end %>
