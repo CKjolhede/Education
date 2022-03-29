@@ -350,7 +350,7 @@
           null,
           1,
           null,
-          1,
+          null,
           1,
           1,
           1,
@@ -364,7 +364,38 @@
       },
       "/Users/kjolhede/turing/2module/education/education/spec/features/students/show_spec.rb": {
         "lines": [
-
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
         ]
       },
       "/Users/kjolhede/turing/2module/education/education/spec/models/school_spec.rb": {
@@ -461,12 +492,12 @@
           null,
           null,
           1,
-          0,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1648478975
+    "timestamp": 1648595323
   }
 }

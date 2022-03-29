@@ -18,7 +18,7 @@ RSpec.describe 'students index page', type: :feature do
 
     visit '/students'
 
-    save_and_open_page
+
     expect(page).to have_content(student_1.name)
     expect(page).to have_content(student_1.gpa)
     expect(page).to have_content(student_2.name)
