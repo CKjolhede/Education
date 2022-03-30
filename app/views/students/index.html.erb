@@ -13,5 +13,6 @@ Student ID: <%= student.id %><br>
 GPA: <%= student.gpa %><br>
 Eligible For Free Lunch: <%= student.freelunch %><br>
 <%= button_to "Edit #{student.name}", "/students/#{student.id}/edit", method: :get %><br>
+<%= button_to "Delete #{student.name}", "/students/#{student.id}", method: :delete %><br>
 -------------------------------------
 <% end %>
