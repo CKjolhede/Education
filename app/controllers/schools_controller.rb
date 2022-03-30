@@ -15,10 +15,13 @@ class SchoolsController < ApplicationController
 
   def create
     @new_school = School.create!(
-      name: (params[:name]),
-      census: (params[:census]))
+      school_params)
       # require "pry"; binding.pry
     redirect_to "/schools/#{@new_school.id}"
+  end
+
+  def school_params
+    params.permit(:name, :census)
   end
 
 end
