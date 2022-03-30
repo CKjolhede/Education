@@ -17,11 +17,11 @@ RSpec.describe 'schools index page', type: :feature do
     @student_22 = Student.create!(name: "Bert Bond", gpa: 2.0, freelunch: true, school_id: @school_2.id)
     @student_3 = Student.create!(name: "Cher CornCob", gpa: 3.4, freelunch: false, school_id: @school_3.id)
     @student_33 = Student.create!(name: "Carl Cobert", gpa: 2.7, freelunch: true, school_id: @school_3.id)
+
+        visit '/schools'
   end
 
   it 'shows all schools' do
-
-    visit '/schools'
 
     expect(page).to have_content(@school_1.name)
     expect(page).to have_content(@school_1.census)
@@ -33,10 +33,8 @@ RSpec.describe 'schools index page', type: :feature do
 
   it 'shows all schools in order of creation' do
 
-    visit '/schools'
-
-  expect(@school_1.name).to appear_before(@school_2.name)
-  expect(@school_3.name).to appear_before(@school_1.name)
+  expect(@school_2.name).to appear_before(@school_1.name)
+  expect(@school_1.name).to appear_before(@school_3.name)
   end
 
   it 'has a link at the top to the student index' do
