@@ -1,13 +1,16 @@
+<% #app/views/students/index.html.erb %>
+
 <ul>
     <a href="/students">Students</a>
     <a href="/schools">Schools</a>
 </ul>
 
-<% #app/views/students/index.html.erb %>
-
-<h1> Students </h1>
+<h1> All Students </h1>
 
 <% @students.each do |student| %>
-<p><b>Name: <%= student.name %><p/>
-<p>GPA: <%= student.gpa %></b></p>
+<h3><%= student.name %></h3>
+Student ID: <%= student.id %><br>
+GPA: <%= student.gpa %><br>
+Eligible For Free Lunch: <%= student.freelunch %><br>
+-------------------------------------
 <% end %>

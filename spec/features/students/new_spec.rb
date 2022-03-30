@@ -31,15 +31,17 @@ RSpec.describe 'when I visit a Parent Child Index page' do
   end
 
   it 'has link to create new student' do
-    expect(page).to have_link("Create Student")
-    expect(current_path).to eq("/schools/#{@school_2.id}/students")
 
-    click_link('Create Student')
-    expect(current_path).to eq("/schools/#{@school_2.id}/schools/new")
+    click_button("Create Student")
+    expect(current_path).to eq("/schools/#{@school_2.id}/students/new")
+  end
+
+  it 'can create a new student' do
+    visit "/schools/#{@school_2.id}/students/new"
 
     fill_in('Name', with: 'Newlin Newton')
-    fill_in('GPA', with: 4.2)
-    fill_in('FreeLunch', with: false)
+    fill_in('gpa', with: 4.2)
+    fill_in('freelunch', with: false)
     click_button('Create Student')
 
     expect(current_path).to eq("/schools/#{@school_2.id}/students")

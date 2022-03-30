@@ -26,7 +26,7 @@ RSpec.describe 'Creating a new School' do
     @student_33 = Student.create!(name: "Carl Cobert", gpa: 2.7, freelunch: true, school_id: @school_3.id)
   end
 
-  it 'links to the new school creation page from the artists index' do
+  it 'links to the new school creation page from the schools index' do
     visit '/schools'
 
     click_link('New School')

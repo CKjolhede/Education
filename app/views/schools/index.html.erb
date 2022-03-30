@@ -7,9 +7,12 @@
 <% #views/schools/index.html.erb %>
 
 <h1> Schools </h1>
-<div>
-<p><% @schools.each do |school| %><%= school.name %> <%= button_to "Edit #{school.name}", "/schools/#{school.id}/edit", method: :get %><p/>
-<p> Maximum Occupancy: <%= school.census %></p>
-<p> School Id Number: <%= school.id %></p>
-</div>
+
+<% @schools.each do |school| %>
+<p><h3><%= school.name %></h3>
+School Id Number: <%= school.id %><br>
+Maximum Occupancy: <%= school.census %><br>
+Date Established: <%= school.created_at %><br><br>
+<%= button_to "Edit #{school.name}", "/schools/#{school.id}/edit", method: :get %><br>
+------------------------------------------
 <% end %>

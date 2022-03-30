@@ -44,4 +44,5 @@ RSpec.describe 'students index page', type: :feature do
     expect(page).to have_link("Schools", :href=>"/schools")
     expect(page).to have_current_path("/schools")
   end
+
 end
