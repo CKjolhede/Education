@@ -1,0 +1,15 @@
+<ul>
+    <a href="/students">Students</a>
+    <a href="/schools">Schools</a>
+</ul>
+
+<h1> <%= @school.name %> Students</h1>
+
+
+<% @students.each do |student| %>
+<p><b>   Student ID: <%= student.id %><br/>
+       Student Name: <%= student.name %><br/>
+        Student GPA: <%= student.gpa %><br/>
+Free Lunch Eligible:  <%= student.freelunch %></b></p>
+
+<% end %>

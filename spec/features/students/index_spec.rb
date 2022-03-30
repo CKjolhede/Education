@@ -1,15 +1,12 @@
-#spec/features/schools/show_spec.rb
+#spec/features/students/index_spec.rb
 
 require 'rails_helper'
-
-
-# User Story 2, Parent Show
+# User Story 3, Child Index
 # As a visitor
-# When I visit '/parents/:id'
-# Then I see the parent with that id including the parent's attributes:
-# - data from each column that is on the parent table
+# When I visit '/child_table_name'
+# Then I see each Child in the system including the Child's attributes:
 
-RSpec.describe 'schools show page', type: :feature do
+RSpec.describe 'students index page', type: :feature do
   before(:each) do
     @school_2 = School.create!(name: "City High School", census: 200)
     @school_1 = School.create!(name: "City Middle School", census: 97)
@@ -21,21 +18,17 @@ RSpec.describe 'schools show page', type: :feature do
     @student_3 = Student.create!(name: "Cher CornCob", gpa: 3.4, freelunch: false, school_id: @school_3.id)
     @student_33 = Student.create!(name: "Carl Cobert", gpa: 2.7, freelunch: true, school_id: @school_3.id)
 
-    visit "/schools/#{@school_1.id}"
+    visit '/students'
   end
 
-  it 'shows attributes of a school' do
+  it 'shows all students w/ attributes' do
 
-    expect(page).to have_content(@school_1.name)
-    expect(page).to have_content(@school_1.census)
-    expect(page).to_not have_content(@school_2.name)
-    expect(page).to_not have_content(@school_2.census)
-    expect(page).to_not have_content(@school_3.name)
-    expect(page).to_not have_content(@school_3.census)
-  end
-  it 'shows number of enrolled students' do
-
-    expect(page).to have_content(@school_1.students.count)
+    expect(page).to have_content(@student_1.name)
+    expect(page).to have_content(@student_1.gpa)
+    expect(page).to have_content(@student_2.name)
+    expect(page).to have_content(@student_2.gpa)
+    expect(page).to have_content(@student_3.name)
+    expect(page).to have_content(@student_3.gpa)
   end
 
   it 'has a link at the top to the student index' do
@@ -45,21 +38,10 @@ RSpec.describe 'schools show page', type: :feature do
     expect(page).to have_current_path("/students")
   end
 
-  it 'has a link at the top to the school index' do
+  it 'has a link at the top to the student index' do
     click_link "Schools"
 
     expect(page).to have_link("Schools", :href=>"/schools")
     expect(page).to have_current_path("/schools")
   end
-
-  it 'has a link at the top to this schools student index' do
-
-    expect(page).to have_link("#{@school_1.name} Students", :href=>"/schools/#{@school_1.id}/students")
-
-    click_link "#{@school_1.name} Students"
-
-    save_and_open_page
-    expect(page).to have_current_path("/schools/#{@school_1.id}/students")
-  end
-
 end

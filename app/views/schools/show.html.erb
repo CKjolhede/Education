@@ -1,0 +1,14 @@
+<ul>
+    <a href="/students">Students</a>
+    <a href="/schools">Schools</a>
+    <a href="/schools/<%= @school.id %>/students"><%=@school.name%> Students</a>
+</ul>
+
+<% #views/schools/show.html.erb %>
+
+<h1> <%= @school.name %> </h1>
+<div>
+<p><b>School Id Number: <%= @school.id %><p/>
+<p> Number of Enrolled Students: <%= @school.students.count %>
+<p> School Staff Size: <%= @school.census %></b></p>
+</div>

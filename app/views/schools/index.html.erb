@@ -1,3 +1,8 @@
+<ul>
+    <a href="/students">Students</a>
+    <a href="/schools">Schools</a>
+</ul>
+
 <% #views/schools/index.html.erb %>
 
 <h1> Schools </h1>
@@ -5,5 +10,6 @@
 <% @schools.each do |school| %>
 <p><b><%= school.name %><p/>
 <p> # of Enrolled Students: <%= school.census %></b></p>
+<p> School Id Number: <%= school.id %></p>
 </div>
 <% end %>

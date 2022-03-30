@@ -1,5 +1,12 @@
+#app/controllers/students_controller.rb
+
 class StudentsController < ApplicationController
 
-def index
-  @student = Student.all
+  def index
+    @students = Student.all
+  end
+
+  def show
+    @student = Student.find(params[:id])
+  end
 end
