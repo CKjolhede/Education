@@ -1,10 +1,5 @@
 #spec/features/schools/index_spec.rb
 require 'rails_helper'
-# User Story 1, Parent Index
-# For each parent table
-# As a visitor
-# When I visit '/parents'
-# Then I see the name of each parent record in the system
 
 RSpec.describe 'schools index page', type: :feature do
   before(:each) do
@@ -33,8 +28,11 @@ RSpec.describe 'schools index page', type: :feature do
 
   it 'shows all schools in order of creation' do
 
-  expect(@school_2.name).to appear_before(@school_1.name)
-  expect(@school_1.name).to appear_before(@school_3.name)
+  expect(@school_1.name).to appear_before(@school_2.name)
+  expect(@school_3.name).to appear_before(@school_1.name)
+  expect(page).to have_content(@school_1.created_at)
+  expect(page).to have_content(@school_2.created_at)
+  expect(page).to have_content(@school_3.created_at)
   end
 
   it 'has a link at the top to the student index' do
@@ -50,4 +48,13 @@ RSpec.describe 'schools index page', type: :feature do
     expect(page).to have_link("Schools", :href=>"/schools")
     expect(page).to have_current_path("/schools")
   end
+
+  it 'has links to delete schools' do
+    expect(page).to have_button("Delete #{@school_1.name}")
+    click_button("Delete #{@school_1.name}")
+    expect(current_path).to eq("/schools")
+    expect(page).to_not have_content(@school_1.name)
+  end
+
+
 end

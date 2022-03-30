@@ -1,14 +1,15 @@
-<ul>
-    <a href="/students">Students</a>
-    <a href="/schools">Schools</a>
-    <a href="/schools/<%= @school.id %>/students"><%=@school.name%> Students</a>
-</ul>
-
 <% #views/schools/show.html.erb %>
-
+<ul>
+    <a href="/students">Students</a><br>
+    <a href="/schools">Schools</a><br>
+    <a href="/schools/<%=@school.id%>/students"><%= @school.name %> Students</a><br>
+</ul>
 <h1> <%= @school.name %> </h1>
 <div>
 <p><b>School Id Number: <%= @school.id %><p/>
-<p> Number of Enrolled Students: <%= @school.students.count %>
-<p> School Staff Size: <%= @school.census %></b></p>
+<p> Number of Enrolled Students: <%= @school.students.count %></p>
+<p> Maximum Occupancy: <%= @school.census %></b></p>
 </div>
+<%= button_to "Edit #{@school.name}", "/schools/#{@school.id}/edit", method: :get %>
+
+<%= link_to "Delete School", "/schools/#{@school.id}", method: :delete %>

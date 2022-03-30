@@ -7,7 +7,7 @@ class School < ApplicationRecord
   validates_presence_of :census
 
   def self.in_order
-    School.order(created_at: :asc)
+    School.order(created_at: :desc)
   end
 
 end

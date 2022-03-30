@@ -44,4 +44,15 @@ RSpec.describe 'students index page', type: :feature do
     expect(page).to have_link("Schools", :href=>"/schools")
     expect(page).to have_current_path("/schools")
   end
+
+
+
+  it 'has links to delete student' do
+save_and_open_page
+    expect(page).to have_button("Delete #{@student_1.name}")
+
+    click_button("Delete #{@student_1.name}")
+    expect(current_path).to eq("/students")
+    expect(page).to_not have_content(@student_1.name)
+  end
 end

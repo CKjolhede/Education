@@ -1,15 +1,18 @@
-<ul>
-    <a href="/students">Students</a>
-    <a href="/schools">Schools</a>
-</ul>
+<% #app/views/school/index %>
+
+<%= link_to "Students", "/students" %><br>
+<%= link_to "Schools", "/schools" %><br>
+<%= link_to "New School", "/schools/new.html.erb" %>
 
 <% #views/schools/index.html.erb %>
 
 <h1> Schools </h1>
-<div>
+
 <% @schools.each do |school| %>
-<p><b><%= school.name %><p/>
-<p> # of Enrolled Students: <%= school.census %></b></p>
-<p> School Id Number: <%= school.id %></p>
-</div>
+<p><h3><%= school.name %></h3>
+School Id Number: <%= school.id %><br>
+Maximum Occupancy: <%= school.census %><br>
+Date Established: <%= school.created_at %><br><br>
+<%= button_to "Edit #{school.name}", "/schools/#{school.id}/edit", method: :get %><br><%= button_to "Delete #{school.name}", "/schools/#{school.id}", method: :delete %><br>
+------------------------------------------
 <% end %>
