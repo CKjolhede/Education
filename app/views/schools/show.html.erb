@@ -11,3 +11,5 @@
 <p> Maximum Occupancy: <%= @school.census %></b></p>
 </div>
 <%= button_to "Edit #{@school.name}", "/schools/#{@school.id}/edit", method: :get %>
+
+<%= link_to "Delete School", "/schools/#{@school.id}", method: :delete %>

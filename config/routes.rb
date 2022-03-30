@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/schools/:id/edit', to: 'schools#edit'
   get '/schools/@school.id/edit', to: 'schools#edit'
   patch '/schools/:id', to: 'schools#update'
+  delete '/schools/:id', to: 'schools#destroy'
+  delete '/schools', to: 'schools#destroy'
 
   get '/students', to: 'students#index'
   get '/students/:id', to: 'students#show'
@@ -16,5 +18,7 @@ Rails.application.routes.draw do
   post '/schools/:id/students', to: 'students#create'
   get '/students/:id/edit', to: 'students#edit'
   patch '/students/:id', to: 'students#update'
+  delete '/students/:id', to: 'students#destroy'
+  delete '/students', to: 'students#destroy'
 
 end
