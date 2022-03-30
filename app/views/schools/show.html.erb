@@ -3,5 +3,6 @@
 <h1> <%= @school.name %> </h1>
 <div>
 <p><b>School Id Number: <%= @school.id %><p/>
-<p> Number of Enrolled Students: <%= @school.census %></b></p>
+<p> Number of Enrolled Students: <%= @school.students.count %>
+<p> School Staff Size: <%= @school.census %></b></p>
 </div>

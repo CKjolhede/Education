@@ -286,6 +286,18 @@
           1,
           1,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
           null,
           null
         ]
@@ -323,7 +335,6 @@
           1,
           1,
           1,
-          1,
           null,
           null
         ]
@@ -350,6 +361,7 @@
           null,
           1,
           null,
+          1,
           null,
           1,
           1,
@@ -387,7 +399,7 @@
           1,
           null,
           1,
-          1,
+          null,
           1,
           1,
           1,
@@ -458,7 +470,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null
         ]
@@ -471,6 +483,8 @@
       },
       "/Users/kjolhede/turing/2module/education/education/app/controllers/school_students_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -498,6 +512,6 @@
         ]
       }
     },
-    "timestamp": 1648595323
+    "timestamp": 1648609618
   }
 }

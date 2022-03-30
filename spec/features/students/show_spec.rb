@@ -21,7 +21,7 @@ RSpec.describe 'students show page', type: :feature do
     student_33 = Student.create!(name: "Carl Cobert", gpa: 2.7, freelunch: true, school_id: school_3.id)
 
     visit "/students/#{student_1.id}"
-    save_and_open_page
+    
     expect(page).to have_content(student_1.name)
     expect(page).to have_content(student_1.freelunch)
     expect(page).to_not have_content(student_2.name)

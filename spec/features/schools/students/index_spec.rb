@@ -21,14 +21,13 @@ RSpec.describe "School student index" do
 
   visit "/schools/#{school_1.id}/students"
 
-  save_and_open_page
   expect(page).to have_content(student_1.name)
   expect(page).to have_content(student_1.gpa)
   expect(page).to have_content(student_1.freelunch)
   expect(page).to have_content(student_11.name)
   expect(page).to have_content(student_11.gpa)
   expect(page).to have_content(student_11.freelunch)
-  expect(page).to have_no_content(student_2.name)
-  expect(page).to have_no_content(student_3.name)
+  expect(page).to_not have_content(student_2.name)
+  expect(page).to_not have_content(student_3.name)
   end
 end
