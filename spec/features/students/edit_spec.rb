@@ -1,8 +1,6 @@
-# spec/features/students/new_spec.rb
-
 require 'rails_helper'
 
-RSpec.describe 'when I visit a Parent Child Index page' do
+RSpec.describe 'when I visit a student show page' do
   before(:each) do
     @school_2 = School.create!(name: "City High School", census: 200)
     @school_1 = School.create!(name: "City Middle School", census: 97)
@@ -14,24 +12,25 @@ RSpec.describe 'when I visit a Parent Child Index page' do
     @student_3 = Student.create!(name: "Cher CornCob", gpa: 3.4, freelunch: false, school_id: @school_3.id)
     @student_33 = Student.create!(name: "Carl Cobert", gpa: 2.7, freelunch: true, school_id: @school_3.id)
 
-    visit "/schools/#{@school_2.id}/students"
+    visit "/students/#{@student_1.id}"
   end
 
-  it 'has link to create new student' do
+  it 'has a button that navigates to eidt screen' do
+    expect(page).to have_button('Update Student')
 
-    click_button("Create Student")
-    expect(current_path).to eq("/schools/#{@school_2.id}/students/new")
+    click_link "Update Student"
+    expect(current_path).to eq("/students/#{@student.id}/edit")
   end
 
-  it 'can create a new student' do
-    visit "/schools/#{@school_2.id}/students/new"
+  it 'can make edits to the student' do
+    visit "/students/#{@student_1.id}/edit"
 
-    fill_in('Name', with: 'Newlin Newton')
-    fill_in('gpa', with: 4.2)
-    fill_in('freelunch', with: false)
-    click_button('Create Student')
+    fill_in "Name", with: "Amy Adams"
+    fill_in "gpa", with: 3.3
+    fill_in 'freelunch', with: true
+    click_button "Update Student"
 
-    expect(current_path).to eq("/schools/#{@school_2.id}/students")
-    expect(page).to have_content("Newlin Newton")
+    expect(current_path).to eq("/students/#{@student_1.id}")
+    expect(page).to have_content("Amy Adams")
   end
 end

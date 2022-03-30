@@ -10,3 +10,5 @@
 <b>Student Id Number: <%= @student.id %><br>
   Grade Point Average: <%= @student.gpa %><br>
 Eligible for free lunch: <%= @student.freelunch %></b>
+
+<%= button_to "Update Student", "/students/#{@student.id}/edit", method: :get %>
