@@ -1,10 +1,5 @@
 #spec/features/schools/index_spec.rb
 require 'rails_helper'
-# User Story 1, Parent Index
-# For each parent table
-# As a visitor
-# When I visit '/parents'
-# Then I see the name of each parent record in the system
 
 RSpec.describe 'schools index page', type: :feature do
   before(:each) do
@@ -53,5 +48,4 @@ RSpec.describe 'schools index page', type: :feature do
     expect(page).to have_link("Schools", :href=>"/schools")
     expect(page).to have_current_path("/schools")
   end
-
 end

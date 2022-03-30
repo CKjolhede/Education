@@ -33,4 +33,13 @@ RSpec.describe 'when I visit a student show page' do
     expect(current_path).to eq("/students/#{@student_1.id}")
     expect(page).to have_content("Amy Adams")
   end
+
+  it 'has link on student index to the student edit page' do
+    visit "/students"
+
+    click_button "Edit #{@student_1.name}"
+
+    expect(current_path).to eq("/students/#{@student_1.id}/edit")
+  end
+
 end
