@@ -1,0 +1,13 @@
+<%= link_to "Students", "/students" %><br>
+<%= link_to "Schools", "/schools" %><br>
+
+<h1>Create a New School</h1>
+<%= form_with url: '/schools', method: :post, local: true do |form|%>
+
+<%= form.label :name %>
+<%= form.text_field :name %><br><br>
+<%= form.label :census %>
+<%= form.text_field :census %><br><br>
+
+<%= form.submit "Create School" %>
+<% end %>

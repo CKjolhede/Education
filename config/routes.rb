@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get '/students', to: 'students#index'
   get '/students/:id', to: 'students#show'
   get '/schools/:school_id/students', to: 'school_students#index'
-
+  get '/schools/new.html.erb', to: 'schools#new'
+  post '/schools', to: 'schools#create'
 end

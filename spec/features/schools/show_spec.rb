@@ -1,13 +1,5 @@
 #spec/features/schools/show_spec.rb
-
 require 'rails_helper'
-
-
-# User Story 2, Parent Show
-# As a visitor
-# When I visit '/parents/:id'
-# Then I see the parent with that id including the parent's attributes:
-# - data from each column that is on the parent table
 
 RSpec.describe 'schools show page', type: :feature do
   before(:each) do
@@ -58,7 +50,6 @@ RSpec.describe 'schools show page', type: :feature do
 
     click_link "#{@school_1.name} Students"
 
-    save_and_open_page
     expect(page).to have_current_path("/schools/#{@school_1.id}/students")
   end
 

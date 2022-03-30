@@ -1,7 +1,7 @@
-<ul>
-    <a href="/students">Students</a>
-    <a href="/schools">Schools</a>
-</ul>
+
+<%= link_to "Students", "/students" %><br>
+<%= link_to "Schools", "/schools" %><br>
+<%= link_to "New School", "/schools/new.html.erb" %>
 
 <% #views/schools/index.html.erb %>
 
@@ -9,7 +9,7 @@
 <div>
 <% @schools.each do |school| %>
 <p><b><%= school.name %><p/>
-<p> # of Enrolled Students: <%= school.census %></b></p>
+<p> Maximum Occupancy: <%= school.census %></b></p>
 <p> School Id Number: <%= school.id %></p>
 </div>
 <% end %>
