@@ -18,8 +18,8 @@ RSpec.describe 'when I visit a student show page' do
   it 'has a button that navigates to eidt screen' do
     expect(page).to have_button('Update Student')
 
-    click_link "Update Student"
-    expect(current_path).to eq("/students/#{@student.id}/edit")
+    click_on "Update Student"
+    expect(current_path).to eq("/students/#{@student_1.id}/edit")
   end
 
   it 'can make edits to the student' do

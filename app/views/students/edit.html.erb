@@ -1,10 +1,9 @@
 <ul>
     <a href="/students">Students</a>
     <a href="/schools">Schools</a>
-    <a href="/schools/<%= @school.id %>/students"><%=@school.name%> Students</a>
 </ul>
 
-<h1>Update School Information</h1>
+<h1>Update Student Information</h1>
 <%= form_with url: "/students/#{@student.id}", method: :patch, local: true do |form| %>
 
 <%= form.label :name %><br>
@@ -13,5 +12,9 @@
 <%= form.label :gps %><br>
 <%= form.text_field :gpa %><br>
 <p> Current GPA: <%= @student.gpa %></p><br>
+<%= form.label :freelunch %><br>
+<%= form.text_field :freelunch %><br>
+<p> Current GPA: <%= @student.freelunch %></p><br>
+
 <%= form.submit "Update Student" %>
 <% end %>

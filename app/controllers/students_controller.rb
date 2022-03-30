@@ -21,6 +21,16 @@ class StudentsController < ApplicationController
     redirect_to "/schools/#{@school.id}/students"
   end
 
+  def edit
+    @student = Student.find(params[:id])
+  end
+
+  def update
+    @student = Student.find(params[:id])
+    @student.update(student_params)
+    redirect_to "/students/#{@student.id}"
+  end
+
   private
   def student_params
     params.permit(:name, :gpa, :freelunch)
