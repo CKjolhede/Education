@@ -31,11 +31,11 @@ RSpec.describe 'schools index page', type: :feature do
     expect(page).to have_content(@school_3.census)
   end
 
-  skip it 'shows all schools in order of creation' do
+  it 'shows all schools in order of creation' do
 
     visit '/schools'
 
-  expect(@school_1.name).to appear_after(@school_2.name)
-  expect(@chool_1.name).to appear_before(@school_3.name)
+  expect(@school_1.name).to appear_before(@school_2.name)
+  expect(@school_3.name).to appear_before(@school_1.name)
   end
 end

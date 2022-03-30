@@ -8,7 +8,6 @@ RSpec.describe Student, type: :model do
   describe "validation" do
     it { should validate_presence_of :name }
     it { should validate_presence_of :gpa }
-    it { should validate_presence_of :freelunch }
 
   end
 
