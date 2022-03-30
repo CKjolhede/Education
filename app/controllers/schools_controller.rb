@@ -22,8 +22,18 @@ class SchoolsController < ApplicationController
   end
 
   def edit
+    @school = School.find(params[:id])
   end
 
+  def update
+    # require "pry"; binding.pry
+    @school = School.find(params[:id])
+    @school.update(school_params)
+    redirect_to "/schools/#{@school.id}"
+  end
+
+
+  private
   def school_params
     params.permit(:name, :census)
   end

@@ -1,0 +1,19 @@
+<% #views/schools/edit.html.erb %>
+
+<ul>
+    <a href="/students">Students</a>
+    <a href="/schools">Schools</a>
+    <a href="/schools/<%= @school.id %>/students"><%=@school.name%> Students</a>
+</ul>
+
+<h1>Update School Information</h1>
+<%= form_with url: "/schools/#{@school.id}", method: :patch, local: true do |form| %>
+
+<%= form.label :name %><br>
+<%= form.text_field :name %><br>
+<p> Current Name: <%= @school.name %></p>
+<%= form.label :census %><br>
+<%= form.text_field :census %><br>
+<p> Current Census: <%= @school.census %></p><br>
+<%= form.submit "Update School" %>
+<% end %>

@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   post '/schools', to: 'schools#create'
   get '/schools/:id/edit', to: 'schools#edit'
   get '/schools/@school.id/edit', to: 'schools#edit'
+  patch '/schools/:id', to: 'schools#update'
 end
