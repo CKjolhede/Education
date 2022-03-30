@@ -38,4 +38,11 @@ RSpec.describe 'schools index page', type: :feature do
   expect(@school_1.name).to appear_before(@school_2.name)
   expect(@school_3.name).to appear_before(@school_1.name)
   end
+
+  it 'has a link at the top to the student index' do
+    click_link "Students"
+
+    expect(page).to have_link("Students", :href=>"/students")
+    expect(page).to have_current_path("/students")
+  end
 end
