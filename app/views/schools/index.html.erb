@@ -1,3 +1,4 @@
+<% #app/views/school/index %>
 
 <%= link_to "Students", "/students" %><br>
 <%= link_to "Schools", "/schools" %><br>
@@ -8,7 +9,7 @@
 <h1> Schools </h1>
 <div>
 <% @schools.each do |school| %>
-<p><b><%= school.name %><p/>
+<p><b><%= school.name %> <%= button_to "Edit #{school.name}", "/schools/#{school.id}/edit", method: :get %><p/>
 <p> Maximum Occupancy: <%= school.census %></b></p>
 <p> School Id Number: <%= school.id %></p>
 </div>

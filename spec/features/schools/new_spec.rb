@@ -42,5 +42,6 @@ RSpec.describe 'Creating a new School' do
     click_button('Create School')
     new_school_id = School.last.id
     expect(current_path).to eq("/schools/#{new_school_id}")
+    expect(page).to have_content('New Academy')
   end
 end

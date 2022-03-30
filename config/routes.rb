@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/schools/:school_id/students', to: 'school_students#index'
   get '/schools/new.html.erb', to: 'schools#new'
   post '/schools', to: 'schools#create'
+  get '/schools/:id/edit', to: 'schools#edit'
+  get '/schools/@school.id/edit', to: 'schools#edit'
 end

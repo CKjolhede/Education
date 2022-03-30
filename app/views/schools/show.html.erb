@@ -12,3 +12,4 @@
 <p> Number of Enrolled Students: <%= @school.students.count %>
 <p> Maximum Occupancy: <%= @school.census %></b></p>
 </div>
+<%= button_to "Edit #{@school.name}", "/schools/#{@school.id}/edit", method: :get %>
