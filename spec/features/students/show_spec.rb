@@ -45,4 +45,12 @@ RSpec.describe 'students show page', type: :feature do
     expect(page).to have_current_path("/schools")
   end
 
+  it 'has a link to delete the student' do
+     expect(page).to have_link('Delete Student')
+
+     click_link("Delete Student")
+     expect(current_path).to eq("/students")
+     expect(page).to_not have_content(@student_1.name)
+  end
+
 end

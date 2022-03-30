@@ -23,7 +23,7 @@ RSpec.describe 'schools show page', type: :feature do
     expect(page).to_not have_content(@school_2.name)
     expect(page).to_not have_content(@school_2.census)
     expect(page).to_not have_content(@school_3.name)
-  
+
   end
   it 'shows number of enrolled students' do
 
@@ -53,4 +53,11 @@ RSpec.describe 'schools show page', type: :feature do
     expect(page).to have_current_path("/schools/#{@school_1.id}/students")
   end
 
+  it 'has a link to delete the school' do
+     expect(page).to have_link('Delete School')
+
+     click_link("Delete School")
+     expect(current_path).to eq("/schools")
+     expect(page).to_not have_content(@school_1.name)
+  end
 end
