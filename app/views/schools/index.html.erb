@@ -13,6 +13,6 @@
 School Id Number: <%= school.id %><br>
 Maximum Occupancy: <%= school.census %><br>
 Date Established: <%= school.created_at %><br><br>
-<%= button_to "Edit #{school.name}", "/schools/#{school.id}/edit", method: :get %><br>
+<%= button_to "Edit #{school.name}", "/schools/#{school.id}/edit", method: :get %><br><%= button_to "Delete #{school.name}", "/schools/#{school.id}", method: :delete %><br>
 ------------------------------------------
 <% end %>
