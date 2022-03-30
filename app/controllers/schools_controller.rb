@@ -14,10 +14,8 @@ class SchoolsController < ApplicationController
   end
 
   def create
-    @new_school = School.create!(
-      name: (params[:name]),
-      census: (params[:census]))
-      # require "pry"; binding.pry
+    @new_school = School.create!(school_params)
+    @new_school.save
     redirect_to "/schools/#{@new_school.id}"
   end
 
@@ -26,12 +24,10 @@ class SchoolsController < ApplicationController
   end
 
   def update
-    # require "pry"; binding.pry
     @school = School.find(params[:id])
     @school.update(school_params)
     redirect_to "/schools/#{@school.id}"
   end
-
 
   private
   def school_params

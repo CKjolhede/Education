@@ -27,7 +27,7 @@ RSpec.describe "School Edit", method: :feature do
 
   it 'link in show to the school edit page' do
     visit "/schools/#{@school_1.id}"
-  
+
     click_button "Edit #{@school_1.name}"
 
     expect(current_path).to eq("/schools/#{@school_1.id}/edit")
@@ -41,7 +41,7 @@ RSpec.describe "School Edit", method: :feature do
     expect(current_path).to eq("/schools/#{@school_1.id}/edit")
   end
 
-  it 'can edit school info from school show' do
+  it 'can edit school info' do
     visit "/schools/#{@school_1.id}/edit"
 
     fill_in "name", with: "Empower Middle School"

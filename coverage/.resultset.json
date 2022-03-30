@@ -536,6 +536,58 @@
           null
         ]
       },
+      "/Users/kjolhede/turing/2module/education/education/spec/features/students/new_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
       "/Users/kjolhede/turing/2module/education/education/spec/features/students/show_spec.rb": {
         "lines": [
           null,
@@ -653,7 +705,6 @@
           2,
           null,
           null,
-          null,
           null
         ]
       },
@@ -694,24 +745,20 @@
           1,
           1,
           null,
-          1,
-          null,
           null,
           1,
           3,
           null,
           null,
           1,
-          null,
           1,
           1,
           1,
           null,
           null,
-          null,
           1,
           1,
-          1,
+          2,
           null,
           null
         ]
@@ -745,14 +792,14 @@
           1,
           null,
           1,
-          4,
+          5,
           null,
-          4,
+          5,
           null,
           null
         ]
       }
     },
-    "timestamp": 1648649932
+    "timestamp": 1648651561
   }
 }
